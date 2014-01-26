@@ -2,9 +2,11 @@
   "name": "redwell",
   "version": "0.0.0",
   "description": "redwell project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "node checkcfg.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "passport-twitter": "~1.0.2",
     "nconf": "~0.6.9",
     "express": "~3.4.8",
-    "nunjucks": "~1.0.1"
+    "nunjucks": "~1.0.1",
+    "read": "~1.0.5"
   }
 }
