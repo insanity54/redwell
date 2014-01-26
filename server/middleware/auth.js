@@ -1,5 +1,9 @@
+var passport = require('passport');
+var user = require('../component/user');
 
+console.log('MIDDLEWARE AUTH HAS BEEN CALLED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 
+function serialize(req, res, next) {
     // Serialize user object to the session
     // this is called on every authenticated request
     // and stores the identifying information in the sesion data
@@ -7,8 +11,9 @@
 	console.log('ima serializeing');
 	done(null, usr.id);
     });
+}
 
-
+function deserialize(req, res, next) {
     // pull the cookie from the user's browser
     // using the cookie, find who it is that is visiting
     // pull that user's info from the db
@@ -23,4 +28,9 @@
             done(null, user);
         });
     });
+}
 
+module.exports = {
+    serialize: serialize,
+    deserialize: deserialize
+}

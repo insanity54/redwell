@@ -1,6 +1,6 @@
 // user module. loads user from database and returns that user's info
 
-module.exports.get_twitter = function(id, done) {
+var get_twitter = function(id, done) {
     // makes a db call to our db using the supplied twitter id. returns user info.
 
     // fake database call // @todo make this a real db call
@@ -17,9 +17,13 @@ module.exports.get_twitter = function(id, done) {
 };
     
 
-module.exports.create = function(profile, done){
+var create = function(profile, done){
 
     done(null, 'creation station');
 }
 
 
+module.exports = {
+    get_twitter: get_twitter,
+    create: create
+}

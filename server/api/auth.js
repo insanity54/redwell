@@ -1,6 +1,6 @@
 var passport = require('passport');
 var TwitterStrategy = require('passport-twitter').Strategy;
-var user = require('./user');
+var user = require('../component/user');
 
 
 var auth = function(app) {
@@ -66,8 +66,6 @@ var auth = function(app) {
 	res.send(200);
     });
 
-
-
     passport.use(new TwitterStrategy({
         consumerKey: app.get('twitter_consumer_key'),
         consumerSecret: app.get('twitter_secret_key'),
@@ -94,11 +92,7 @@ var auth = function(app) {
                 // more info: http://passportjs.org/guide/configure/
                 // error finding or creating user
             });
-	}))		                
-
-
-
-
+	}))
 };
 
 module.exports = auth;
