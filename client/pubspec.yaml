@@ -1,0 +1,6 @@
+name: terd03
+homepage: https://github.com/Extremetoaster/redwell
+description: redwell testing
+dependencies:
+  browser: any
+  stagexl: any
