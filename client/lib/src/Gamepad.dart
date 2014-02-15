@@ -13,7 +13,7 @@ class Gamepad extends Player {
 
   void create() {
     // @todo
-    // player just joined. gampad is created
+    // player just joined. gamepad is created
     // something like _id = _id.length(); 
     _id = _id.length();
   }

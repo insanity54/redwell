@@ -21,7 +21,7 @@ class Setup extends Sprite {
     
     //JsObject _gamepadSupport = new JsObject(context['gamepadSupport']);
     
-    print(_gamepadSupport['TYPICAL_BUTTON_COUNT']);
+    //print(_gamepadSupport['TYPICAL_BUTTON_COUNT']);
 
     Bitmap startButtonNormal = new Bitmap(_resourceManager.getBitmapData("testButtonNormal"));
     Bitmap startButtonPressed = new Bitmap(_resourceManager.getBitmapData("testButtonPressed"));
@@ -31,6 +31,7 @@ class Setup extends Sprite {
     _startButton.x = 2;
     _startButton.y = 25;
     addChild(_startButton);
+    print('addded start butt.');
     
     
   }
@@ -45,12 +46,14 @@ class Setup extends Sprite {
   void _onStartButtonClick(MouseEvent me) {
     // start game when the start button is clicked
     print("onStartButtonClick");
-
+    this.removeChild(_startButton);
+    
     _juggler = stage.juggler;
     var game = new Game(_resourceManager, _juggler);
     addChild(new Bitmap(_resourceManager.getBitmapData("background")));
     addChild(game);
     game.start();
+    //this.parent.removeChild(this);
   }
   
   

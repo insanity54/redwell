@@ -1,12 +1,20 @@
 part of terd;
 
-class Player extends Sprite {
+class Player extends Mob {
+  // Player facts
+  //   - controllable via usb gamepad
+  //   - keeps a score
+  //   - has account
+  //   - has powerups
   
-  var _id;      // player ID number (0-3)
-  var _gamepad; // gamepad ID which will control this player
+  int _id;      // player ID number (0-3)
   
   Player() {
-    // @todo
-    print('hello player');
+    print('hello player ' + _id.toString());
+    if ( _id == null ) {
+      _id = super.getId + 1;
+    }
   }
+  
+  int get id => _id;
 }

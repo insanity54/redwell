@@ -7,6 +7,7 @@ import 'package:stagexl/stagexl.dart';
 import 'dart:js';
 
 part 'src/Setup.dart'; // screen where players join the game
+part 'src/Mob.dart';
 part 'src/Player.dart'; 
 part 'src/Gamepad.dart';
 part 'src/Game.dart';
@@ -29,6 +30,8 @@ class Terd extends Sprite {
     var setup = new Setup(_resourceManager, _juggler);
     addChild(setup);
     setup.start();
+
+
     
 //    _juggler = stage.juggler;
 //    print('terd::_onaddedtostage');
