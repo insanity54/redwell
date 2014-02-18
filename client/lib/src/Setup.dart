@@ -8,21 +8,41 @@ class Setup extends Sprite {
   SimpleButton _startButton;
   Sprite _textLayer;
   
-  TextField _player0Text;
-  TextField _player1Text;
-  TextField _player2Text;
-  TextField _player3Text;
-  
-  //var _gamepadSupport;
+  var _gamepadSupport;
   
  
   Setup(ResourceManager this._resourceManager, Juggler this._juggler) {
+
     print('setup');
     
-    //JsObject _gamepadSupport = new JsObject(context['gamepadSupport']);
     
-    //print(_gamepadSupport['TYPICAL_BUTTON_COUNT']);
+    JsObject _gamepadSupport = context['gamepadSupport'];
+        //new JsObject(context['gamepadSupport']);
+    print(' button count: ');
+    print(_gamepadSupport['TYPICAL_BUTTON_COUNT']);
+    
+    print(' init');
 
+    
+
+    _gamepadSupport.callMethod('init', []);
+
+    print('passed');
+    
+    while (true) {
+
+     _gamepadSupport.callMethod('pollGamepads', []);
+      
+      var gamepadArray = _gamepadSupport['gamepads'];
+      
+      if ( gamepadArray.length > 0 ) {
+        print(gamepadArray[0]['buttons'][0]);
+      }
+    }
+    
+    
+    print('passing');
+    
     Bitmap startButtonNormal = new Bitmap(_resourceManager.getBitmapData("testButtonNormal"));
     Bitmap startButtonPressed = new Bitmap(_resourceManager.getBitmapData("testButtonPressed"));
     
@@ -55,6 +75,4 @@ class Setup extends Sprite {
     game.start();
     //this.parent.removeChild(this);
   }
-  
-  
 }
