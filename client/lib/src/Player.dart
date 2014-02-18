@@ -1,6 +1,6 @@
 part of terd;
 
-class Player extends Mob {
+abstract class Player extends Mob {
   // Player facts
   //   - controllable via usb gamepad
   //   - keeps a score
@@ -15,6 +15,10 @@ class Player extends Mob {
       _id = super.getId + 1;
     }
   }
+  
+  void attack();
+  
+  void update();
   
   int get id => _id;
 }

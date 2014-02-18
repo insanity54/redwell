@@ -1,7 +1,6 @@
 part of terd;
 
-class MobHandler
-{
+class MobHandler {
   // Uses a list to hold all the mobs.
   List<Mob> _objects;
   

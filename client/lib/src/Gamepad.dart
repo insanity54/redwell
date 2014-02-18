@@ -9,7 +9,9 @@ class Gamepad extends Player {
     
     this.create();
   }
-
+  
+  void update(){}
+  void attack(){}
 
   void create() {
     // @todo
