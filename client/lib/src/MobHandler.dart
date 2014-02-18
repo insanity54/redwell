@@ -5,11 +5,17 @@ class MobHandler
   // Uses a list to hold all the mobs.
   List<Mob> _objects;
   
-  MobHandler(){}
+  MobHandler(){
+    _objects = new List<Mob>();
+  }
   
-  void addMob(Mob mob){}
+  void addMob(Mob mob){
+    _objects.add(mob);
+  }
   
-  void deleteMob(int index){}
+  void deleteMob(int index){
+    _objects.removeAt(index);
+  }
   
   void update(){}
   
