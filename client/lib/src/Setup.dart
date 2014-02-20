@@ -8,38 +8,50 @@ class Setup extends Sprite {
   SimpleButton _startButton;
   Sprite _textLayer;
   
-  var _gamepadSupport;
+  List<Gamepad> _gamepads;  // list of all our gamepad objects 
+  JsObject _gamepadSupport; // our proxy to gamepad.js
+  int _numGamepads = 0;     // number of gamepads connected    
+  int _maxGamepads = 3;     // Human-readable natural number of gamepads there needs to be
+
   
- 
   Setup(ResourceManager this._resourceManager, Juggler this._juggler) {
 
-    print('setup');
-    
+    _gamepads = new List<Gamepad>();
     
     JsObject _gamepadSupport = context['gamepadSupport'];
-        //new JsObject(context['gamepadSupport']);
+    //new JsObject(context['gamepadSupport']);
     print(' button count: ');
     print(_gamepadSupport['TYPICAL_BUTTON_COUNT']);
     
     print(' init');
-
-    
-
     _gamepadSupport.callMethod('init', []);
-
-    print('passed');
     
-    while (true) {
+    print('INFO:  Please connect ${_maxGamepads.toString()} gamepads.');
+    
+    while ( _numGamepads <= _maxGamepads - 1 ) {
+      // while there are less than three players
+      _gamepadSupport.callMethod('pollGamepads', []);  // poll gamepad.js
+      
+      JsObject gp; // gamepad
+      for (gp in _gamepadSupport['gamepads']){
 
-     _gamepadSupport.callMethod('pollGamepads', []);
-      
-      var gamepadArray = _gamepadSupport['gamepads'];
-      
-      if ( gamepadArray.length > 0 ) {
-        print(gamepadArray[0]['buttons'][0]);
-      }
+        int i = gp['index'];
+        
+        try {
+          // if this gamepad index already has a Gamepad class instance with the same id
+          _gamepads[i].getId;
+          
+        } catch (e) {
+          print('no gamepad with id ${i}');
+          _gamepads.add(new Gamepad(i));
+          
+          print('added gamepad ${i}');
+          _numGamepads++;
+        }
+      } 
     }
-    
+
+    print('INFO:  done with gamepads');     
     
     print('passing');
     

@@ -9,11 +9,11 @@ abstract class Player extends Mob {
   
   int _id;      // player ID number (0-3)
   
-  Player() {
+  Player(this._id) {
     print('hello player ' + _id.toString());
-    if ( _id == null ) {
-      _id = super.getId + 1;
-    }
+//    if ( _id == null ) {
+//      _id = super.getId + 1;
+//    }
   }
   
   void attack();
