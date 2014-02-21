@@ -53,7 +53,6 @@ class Setup extends Sprite {
 
     print('INFO:  done with gamepads');     
     
-    print('passing');
     
     Bitmap startButtonNormal = new Bitmap(_resourceManager.getBitmapData("testButtonNormal"));
     Bitmap startButtonPressed = new Bitmap(_resourceManager.getBitmapData("testButtonPressed"));
@@ -81,7 +80,7 @@ class Setup extends Sprite {
     this.removeChild(_startButton);
     
     _juggler = stage.juggler;
-    var game = new Game(_resourceManager, _juggler);
+    var game = new Game(_resourceManager, _juggler, _gamepads);
     addChild(new Bitmap(_resourceManager.getBitmapData("background")));
     addChild(game);
     game.start();

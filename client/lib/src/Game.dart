@@ -4,6 +4,7 @@ class Game extends Sprite {
 
   ResourceManager _resourceManager;
   Juggler _juggler;
+  List<Gamepad> _gamepads;
   
   SimpleButton _testButton;
   TimeGauge _timeGauge;
@@ -15,10 +16,7 @@ class Game extends Sprite {
   
   Sprite _pointLayer;
   
-  Game(ResourceManager resourceManager, Juggler juggler) {
-
-    _resourceManager = resourceManager;
-    _juggler = juggler;
+  Game(this._resourceManager, this._juggler, this._gamepads) {
     
     Bitmap testButtonNormal = new Bitmap(_resourceManager.getBitmapData("testButtonNormal"));
     Bitmap testButtonPressed = new Bitmap(_resourceManager.getBitmapData("testButtonPressed"));
