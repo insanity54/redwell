@@ -7,8 +7,12 @@ import 'package:stagexl/stagexl.dart';
 import 'dart:js';
 
 part 'src/Setup.dart'; // screen where players join the game
+part 'src/MobHandler.dart';
 part 'src/Mob.dart';
 part 'src/Player.dart'; 
+part 'src/Gunner.dart';
+part 'src/Puncher.dart';
+part 'src/Sworder.dart';
 part 'src/Gamepad.dart';
 part 'src/Game.dart';
 part 'src/MessageBox.dart';

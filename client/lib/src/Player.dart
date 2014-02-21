@@ -6,6 +6,8 @@ abstract class Player extends Mob {
   //   - keeps a score
   //   - has account
   //   - has powerups
+  //   - can move up, down, left right
+  //   - attacks in the direction they're facing
   
   int _id;      // player ID number (0-3)
   

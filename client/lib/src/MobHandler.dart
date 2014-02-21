@@ -19,4 +19,6 @@ class MobHandler {
   void update(){}
   
   void render(){}
+  
+  String get list => _objects.toString();
 }
