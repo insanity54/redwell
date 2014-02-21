@@ -9,7 +9,7 @@ class MessageBox extends Sprite
   Function _doneFunction;
 
   MessageBox(ResourceManager resourceManager, Juggler juggler, String text) {
-
+    
     print("text: " + text);
     _resourceManager = resourceManager;
     _juggler = juggler;

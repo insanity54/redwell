@@ -65,7 +65,7 @@ void loadResources() {
   resourceManager.addBitmapData("testButtonPressed", "img/button_press.png");
   resourceManager.addBitmapData("MessageBox", "img/messagebox.png");
   
-  resourceManager.addText("ESCStartText", "Form horizontal or vertical same-colour chains and become an escape agent!");
+  resourceManager.addText("ESCStartText", "RUN AWAY, RUN AWAY!");
   
   resourceManager.load().then((res) {
     
