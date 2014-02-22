@@ -1,6 +1,11 @@
 part of terd;
 
 class MobHandler {
+  // Handles mob movement, attacks, damage, deletion. (@Jacob: Is that right?)
+  
+  // gamepad[0].up so that means mobHandler._objects[0].up
+  
+  
   // Uses a list to hold all the mobs.
   List<Mob> _objects;
   

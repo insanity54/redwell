@@ -6,13 +6,19 @@ abstract class Mob extends Sprite {
   //   - Have hitpoints
   //   - Have a sprite sheet
   //   - have associated sounds
+  
+  ResourceManager _resourceManager;
+  Juggler _juggler;
+  
   int _health;
   int _x;
   int _y;
   int _id;
   
-  Mob() {
-    // @todo
+  Mob(this._resourceManager, this._juggler) {
+    // @todo this constructor needs to generate a unique ID
+    
+    print('mob made');
   }
   
   void update();

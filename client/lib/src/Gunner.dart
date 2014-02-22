@@ -5,7 +5,16 @@ class Gunner extends Player {
   // Gunner facts:
   //   - Shoots bullets in the direction the gunner is facing
   
-  Gunner(id) : super(id) {
+  List<BitmapData> _gunnerBitmapDatas;
+  
+  
+  Gunner(resourceManager, juggler) : super(resourceManager, juggler) {
+    
+    _gunnerBitmapDatas = GraphicsHandler.getCharacter(_resourceManager, "gramps");
+    parent.addChild(_gunnerBitmapDatas.first.render());
+  }
+  
+  void up() {
     
   }
   

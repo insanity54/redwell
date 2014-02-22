@@ -1,10 +1,10 @@
 part of terd;
 
-class Gamepad extends Player {
+class Gamepad extends Sprite {
   
-  //int _id;  // gamepad id number. Starts at 0. ex: player0 uses gamepad0, player1 uses gamepad1, etc.
+  int _id;  // gamepad id number. Starts at 0. ex: player0 uses gamepad0, player1 uses gamepad1, etc.
   
-  Gamepad(id) : super(id) {
+  Gamepad(this._id) {
     // @todo
     
     this.create();
@@ -19,5 +19,5 @@ class Gamepad extends Player {
 
   }
   
-  int get id => _id;
+  int get getId => _id;
 }

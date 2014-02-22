@@ -8,11 +8,9 @@ abstract class Player extends Mob {
   //   - has powerups
   //   - can move up, down, left right
   //   - attacks in the direction they're facing
-  
-  int _id;      // player ID number (0-3)
-  
-  Player(this._id) {
-    print('hello player ' + _id.toString());
+    
+  Player(resourceManager, juggler) : super(resourceManager, juggler) {
+    //print('hello player ' + _id.toString());
 //    if ( _id == null ) {
 //      _id = super.getId + 1;
 //    }

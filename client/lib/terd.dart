@@ -8,6 +8,8 @@ import 'dart:js';
 
 part 'src/Setup.dart'; // screen where players join the game
 part 'src/MobHandler.dart';
+part 'src/GamepadHandler.dart';
+part 'src/GraphicsHandler.dart';
 part 'src/Mob.dart';
 part 'src/Player.dart'; 
 part 'src/Gunner.dart';

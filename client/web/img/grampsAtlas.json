@@ -1,0 +1,76 @@
+{"frames": [
+
+{
+	"filename": "standbackward.png",
+	"frame": {"x":0,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "standforward.png",
+	"frame": {"x":15,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "standleft.png",
+	"frame": {"x":30,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "walkbackward.png",
+	"frame": {"x":45,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "walkforward.png",
+	"frame": {"x":60,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "walkleft1.png",
+	"frame": {"x":75,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "walkleft2.png",
+	"frame": {"x":90,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+},
+{
+	"filename": "special.png",
+	"frame": {"x":105,"y":0,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20}
+}],
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "grampsAtlas.png",
+	"format": "RGBA8888",
+	"size": {"w":120,"h":20},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:20e5eaf75258e412a9341c26f980c7f5$"
+}
+}

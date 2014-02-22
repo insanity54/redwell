@@ -5,7 +5,7 @@ class Puncher extends Player {
   // Puncher facts:
   //   - low attack range
   
-  Puncher(id) : super(id) {
+  Puncher(resourceManager, juggler) : super(resourceManager, juggler) {
     
   }
   

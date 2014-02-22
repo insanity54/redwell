@@ -5,7 +5,7 @@ class Sworder extends Player {
   // Sworder facts:
   //   - todo
   
-  Sworder(id) : super(id) {
+  Sworder(resourceManager, juggler) : super(resourceManager, juggler) {
     
   }
   

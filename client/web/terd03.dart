@@ -64,9 +64,14 @@ void loadResources() {
   resourceManager.addBitmapData("testButtonNormal", "img/button_normal.png");
   resourceManager.addBitmapData("testButtonPressed", "img/button_press.png");
   resourceManager.addBitmapData("MessageBox", "img/messagebox.png");
+  resourceManager.addBitmapData("guy", "img/character_placeholder1.png");
+  resourceManager.addBitmapData("gal", "img/character_placeholder3.png");
+  resourceManager.addBitmapData("badguy", "img/character_placeholder4.png");
+  
+  resourceManager.addTextureAtlas("gramps", "img/grampsAtlas.json", TextureAtlasFormat.JSONARRAY);
   
   resourceManager.addText("ESCStartText", "RUN AWAY, RUN AWAY!");
-  
+
   resourceManager.load().then((res) {
     
     stage.removeChild(loadingBitmap);

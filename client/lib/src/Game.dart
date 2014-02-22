@@ -17,6 +17,8 @@ class Game extends Sprite {
   Sprite _pointLayer;
   
   Game(this._resourceManager, this._juggler, this._gamepads) {
+
+
     
     Bitmap testButtonNormal = new Bitmap(_resourceManager.getBitmapData("testButtonNormal"));
     Bitmap testButtonPressed = new Bitmap(_resourceManager.getBitmapData("testButtonPressed"));
@@ -29,20 +31,38 @@ class Game extends Sprite {
     
     _pointLayer = new Sprite();
     addChild(_pointLayer);
+    
+    
+    MobHandler mobHandler = new MobHandler();   
+    Gunner gunner = new Gunner(_resourceManager, _juggler);
+    Puncher puncher = new Puncher(_resourceManager, _juggler);
+    Sworder sworder = new Sworder(_resourceManager, _juggler);
+    
+ 
+    addChild(gunner);
+    
+    
+    
+    print(mobHandler.list);
   }
   
   void start() {
-
     print('game::start');
     _level = 1;
     _points = 0;
-    
+
+
     MessageBox pointBox = new MessageBox(_resourceManager, _juggler, _resourceManager.getText("ESCStartText"));
     _pointLayer.addChild(pointBox);
 
-//    _juggler.delayCall(() => _head.nod(21), 1); //@todo delete
-
     pointBox.show(() => _juggler.delayCall(() => _nextLevel(), 0.5));
+    
+    
+    
+    
+    
+    
+    
   }
   
   void _nextLevel() {
