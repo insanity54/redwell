@@ -11,7 +11,8 @@ class Gunner extends Player {
   Gunner(resourceManager, juggler) : super(resourceManager, juggler) {
     
     _gunnerBitmapDatas = GraphicsHandler.getCharacter(_resourceManager, "gramps");
-    parent.addChild(_gunnerBitmapDatas.first.render());
+    Bitmap _gunnerBitmap = new Bitmap(_gunnerBitmapDatas.first);
+    addChild(_gunnerBitmap);
   }
   
   void up() {
