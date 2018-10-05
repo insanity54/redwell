@@ -1,6 +1,8 @@
 redwell
 =======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/insanity54/redwell.svg)](https://greenkeeper.io/)
+
 Project redwell
 
 
